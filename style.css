@@ -1,4 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 * {
     margin: 0;
@@ -8,7 +8,7 @@
     border: none;
     outline: none;
     scroll-behavior: smooth;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'poppins', sans-serif;
 }
 
 :root {
@@ -76,6 +76,8 @@ section {
     display: flex;
     align-items: center;
     padding: 0 9%;
+   
+
 }
 
 .home-content {
@@ -188,10 +190,10 @@ section {
     z-index: 1;
     overflow: hidden;
     transition: .5s;
-}
+} 
 
-.home-sci a:hover {
-    color: var(--bg-color);
+.home-sci a:hover{
+    color:var(--bg-color)
 }
 
 .home-sci a::before {
@@ -201,13 +203,36 @@ section {
     left: 0;
     width: 0;
     height: 100%;
-    background: var(--main-color);
+    background:var(--main-color);
     z-index: -1;
     transition: .5s;
 }
 
 .home-sci a:hover::before {
     width: 100%;
+}
+/* .home-imgHover{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45%;
+    height: 100%;
+    background: transparent;
+    
+    transition: 3s;
+
+}
+.home-imgHover:hover{
+    background: var(--bg-color);
+    opacity: .8s;
+} */
+
+
+.home-sci {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
 }
 
 .social-icon {
@@ -239,29 +264,40 @@ section {
     transform: rotate(360deg);
 }
 
+
+
 .photo-container {
-    position: absolute;
-    top: 55%;
-    right: 150px;
-    transform: translateY(-50%);
-    width: 30%;
-    height: auto;
+    position: absolute; 
+    top: 55%; 
+    right: 150px; 
+    transform: translateY(-50%); 
+    width: 30%; 
+    height: auto; 
 }
 
 .photo-container img {
-    width: 100%;
-    height: auto;
-    border-radius: 0px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%; 
+    height: auto; 
+    border-radius: 0px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
+/* General Section Styling */
+/* section {
+    padding: 60px 10%;
+    color: white;
+    text-align: center;
+    background-color: #091b29;
+} */
+
+/* About Section */
 #about {
-    background-color: var(--bg-color);
+    background-color:var(--bg-color);
 }
 
 #about h2 {
     font-size: 2.5rem;
-    color: var(--main-color);
+    color:var(--main-color);
     margin-bottom: 20px;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -276,34 +312,64 @@ section {
     color: yellowgreen;
 }
 
+/* Education Section */
 #education {
-    background-color: var(--bg-color);
+    background-color: var(--bg-color); /* Background color */
     padding: 20px;
     margin: 20px auto;
-    width: 80%;
-    max-width: 1200px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border: 1px solid #ddd;
+    width: 80%; /* Makes it centered with some space on the sides */
+    max-width: 1200px; /* Maximum width for larger screens */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    border: 1px solid #ddd; /* Light border around the section */
 }
 
+/* Title of Education Section */
+
 #education h2 {
+    font-size: 2rem;
+}
+
+#education p {
+    font-size: 1rem;
+}
+
+.education-item {
+    padding: 12px;
+}
+
+
+
+
+
+
+
+#education h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 2.5rem;
     color: var(--main-color);
     margin-bottom: 20px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    border-bottom: 3px solid white;
-    padding-bottom: 5px;
-    width: 100%;
+    border-bottom: 3px solid white; /* Bottom border for title */
+    padding-bottom: 5px; /* Small space below the title */
+    width: 100%; /* Ensure it spans the full width of the parent container */
 }
 
+
+/* Paragraph Styling */
 #education p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 1.2rem;
     margin: 10px 0;
     color: lightgray;
 }
 
+/* Strong Text (Degree Titles) */
 #education p strong {
     color: yellowgreen;
     font-size: 2.0rem;
@@ -311,27 +377,31 @@ section {
     margin-top: 5px;
 }
 
+/* Education Item Box */
 .education-item {
     background-color: #fff;
     padding: 15px;
     margin: 15px 0;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border: 1px solid #ddd; /* Light border around each item */
 }
 
+/* Alternate Background for Education Items */
 .education-item:nth-child(even) {
-    background-color: #f9f9f9;
+    background-color: #f9f9f9; /* Slightly different background for even items */
 }
 
+/* Styling the Year Text */
 .education-item p:last-of-type {
-    color: #888;
+    color: #888; /* Lighter color for the year */
     font-style: italic;
 }
 
+/* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
     #education {
-        width: 90%;
+        width: 90%; /* Make it a bit wider on smaller screens */
         padding: 15px;
     }
 
@@ -348,6 +418,7 @@ section {
     }
 }
 
+/* Skills Section */
 #skills {
     background-color: var(--bg-color);
 }
@@ -373,7 +444,7 @@ section {
 }
 
 #skills ul li {
-    background: black;
+    background:black;
     color: yellowgreen;
     padding: 10px 20px;
     border-radius: 25px;
@@ -388,6 +459,7 @@ section {
     color: var(--main-color);
 }
 
+/* Projects Section */
 #projects {
     background-color: var(--bg-color);
     padding: 60px 10%;
@@ -431,8 +503,6 @@ section {
     font-size: 1.2rem;
     margin-bottom: 15px;
 }
-
-
 
 .project-card .btn {
     background: yellowgreen;
@@ -541,5 +611,106 @@ section {
     border-radius: 5px;
     background:
 }
+
+
+
+/* General Styles for Mobile Devices */
+@media (max-width: 768px) {
+    html {
+        font-size: 50%; /* Adjust base font size */
+    }
+
+    .header {
+        padding: 1rem 5%; /* Reduce padding */
+    }
+
+    .navbar a {
+        font-size: 1.5rem; /* Smaller font size for links */
+        margin-right: 1rem; /* Reduce margin */
+    }
+
+    .home-content h1 {
+        font-size: 4rem; /* Smaller heading */
+    }
+
+    .home-content .text-animate h3 {
+        font-size: 2.5rem; /* Smaller subheading */
+    }
+
+    .home-content p {
+        font-size: 1.4rem; /* Smaller paragraph text */
+    }
+
+    .btn-box {
+        flex-direction: column; /* Stack buttons vertically */
+        width: 100%; /* Full width */
+    }
+
+    .btn-box .btn {
+        width: 100%; /* Full width for buttons */
+        margin-bottom: 1rem; /* Space between buttons */
+    }
+
+    .photo-container {
+        position: relative; /* Change to relative for better positioning */
+        top: auto; /* Reset top */
+        right: auto; /* Reset right */
+        width: 80%; /* Full width on mobile */
+        margin: 0 auto; /* Center the image */
+    }
+
+    .project-card {
+        width: 100%; /* Full width for project cards */
+        margin-bottom: 20px; /* Space between cards */
+    }
+
+    #education, #skills, #projects, #cv, #contact {
+        padding: 20px; /* Reduce padding */
+    }
+
+    #education h2, #skills h2, #projects h2, #cv h2, #contact h2 {
+        font-size: 2rem; /* Smaller section titles */
+    }
+
+    #education p, #skills ul li, #projects p {
+        font-size: 1rem; /* Smaller text */
+    }
+
+    .social-icon {
+        width: 40px; /* Smaller social icons */
+        height: 40px; /* Smaller social icons */
+        font-size: 1.5rem; /* Smaller icon size */
+    }
+}
+
+/* Additional Styles for Very Small Devices */
+@media (max-width: 480px) {
+    .header {
+        flex-direction: column; /* Stack header elements */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .navbar {
+        display: none; /* Hide navbar on small screens */
+    }
+
+    #menu-icon {
+        display: block; /* Show menu icon */
+    }
+
+    .home-content h1 {
+        font-size: 3rem; /* Further reduce heading size */
+    }
+
+    .home-content .text-animate h3 {
+        font-size: 2rem; /* Further reduce subheading size */
+    }
+
+    .btn-box .btn {
+        font-size: 1.5rem; /* Smaller button text */
+    }
+}
+
+
 
 
