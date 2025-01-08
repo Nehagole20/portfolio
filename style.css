@@ -1,0 +1,596 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap'); */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'poppins', sans-serif;
+}
+
+:root {
+    --bg-color: #081b29;
+    --second-bg-color: #254f6c;
+    --text-color: #ededed;
+    --main-color: #da8207;
+}
+
+html {
+    font-size: 62.1%;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.navbar a {
+    margin-right: 2rem;
+    font-size: 1.7rem;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a:active {
+    color: var(--main-color);
+}
+
+#menu-icon {
+    font-size: 3.4rem;
+    color: var(--text-color);
+    cursor: pointer;
+    display: none;
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    padding: 0 9%;
+   
+
+}
+
+.home-content {
+    max-width: 60rem;
+}
+
+.home-content h1 {
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.home-content .text-animate {
+    position: relative;
+    width: 32.8rem;
+}
+
+.home-content .text-animate h3 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: transparent;
+    -webkit-text-stroke: .7px var(--main-color);
+}
+
+.home-content p {
+    font-size: 1.6rem;
+    margin: 2rem 0 4rem;
+}
+
+.btn-box {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 34.5rem;
+    height: 5rem;
+}
+
+.btn-box .btn {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    height: 100%;
+    background-color: var(--main-color);
+    border: .2rem solid var(--main-color);
+    border-radius: .8rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    color: var(--bg-color);
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.btn-box .btn:hover {
+    color: var(--main-color);
+}
+
+.btn-box .btn:nth-child(2) {
+    background: transparent;
+    color: var(--main-color);
+}
+
+.btn-box .btn:nth-child(2):hover {
+    color: var(--bg-color);
+}
+
+.btn-box .btn:nth-child(2)::before {
+    background: var(--main-color);
+}
+
+.btn-box .btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--bg-color);
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box .btn:hover::before {
+    width: 100%;
+}
+
+.home-sci {
+    position: absolute;
+    bottom: 4rem;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-sci a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 20px;
+    color: var(--main-color);
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+} 
+
+.home-sci a:hover{
+    color:var(--bg-color)
+}
+
+.home-sci a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background:var(--main-color);
+    z-index: -1;
+    transition: .5s;
+}
+
+.home-sci a:hover::before {
+    width: 100%;
+}
+/* .home-imgHover{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45%;
+    height: 100%;
+    background: transparent;
+    
+    transition: 3s;
+
+}
+.home-imgHover:hover{
+    background: var(--bg-color);
+    opacity: .8s;
+} */
+
+
+.home-sci {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+}
+
+.social-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background: var(--bg-color);
+    border: 2px solid var(--main-color);
+    border-radius: 50%;
+    text-decoration: none;
+    color: var(--main-color);
+    font-size: 2.5rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+    background: var(--main-color);
+    color: var(--bg-color);
+    transform: scale(1.1);
+}
+
+.social-icon i {
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icon:hover i {
+    transform: rotate(360deg);
+}
+
+
+
+.photo-container {
+    position: absolute; 
+    top: 55%; 
+    right: 150px; 
+    transform: translateY(-50%); 
+    width: 30%; 
+    height: auto; 
+}
+
+.photo-container img {
+    width: 100%; 
+    height: auto; 
+    border-radius: 0px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+/* General Section Styling */
+/* section {
+    padding: 60px 10%;
+    color: white;
+    text-align: center;
+    background-color: #091b29;
+} */
+
+/* About Section */
+#about {
+    background-color:var(--bg-color);
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    color:var(--main-color);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 3px solid white;
+    display: inline-block;
+}
+
+#about p {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    margin-top: 20px;
+    color: yellowgreen;
+}
+
+/* Education Section */
+#education {
+    background-color: var(--bg-color); /* Background color */
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%; /* Makes it centered with some space on the sides */
+    max-width: 1200px; /* Maximum width for larger screens */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    border: 1px solid #ddd; /* Light border around the section */
+}
+
+/* Title of Education Section */
+#education h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    color: var(--main-color);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 3px solid white; /* Bottom border for title */
+    padding-bottom: 5px; /* Small space below the title */
+    width: 100%; /* Ensure it spans the full width of the parent container */
+}
+
+
+/* Paragraph Styling */
+#education p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: lightgray;
+}
+
+/* Strong Text (Degree Titles) */
+#education p strong {
+    color: yellowgreen;
+    font-size: 2.0rem;
+    display: block;
+    margin-top: 5px;
+}
+
+/* Education Item Box */
+.education-item {
+    background-color: #fff;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border: 1px solid #ddd; /* Light border around each item */
+}
+
+/* Alternate Background for Education Items */
+.education-item:nth-child(even) {
+    background-color: #f9f9f9; /* Slightly different background for even items */
+}
+
+/* Styling the Year Text */
+.education-item p:last-of-type {
+    color: #888; /* Lighter color for the year */
+    font-style: italic;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    #education {
+        width: 90%; /* Make it a bit wider on smaller screens */
+        padding: 15px;
+    }
+
+    #education h2 {
+        font-size: 2rem;
+    }
+
+    #education p {
+        font-size: 1rem;
+    }
+
+    .education-item {
+        padding: 12px;
+    }
+}
+
+/* Skills Section */
+#skills {
+    background-color: var(--bg-color);
+}
+
+#skills h2 {
+    font-size: 2.5rem;
+    color: var(--main-color);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 3px solid white;
+    display: inline-block;
+}
+
+#skills ul {
+    list-style: none;
+    margin: 20px 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+#skills ul li {
+    background:black;
+    color: yellowgreen;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 2.1rem;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+#skills ul li:hover {
+    transform: scale(1.1);
+    background: var(--bg-color);
+    color: var(--main-color);
+}
+
+/* Projects Section */
+#projects {
+    background-color: var(--bg-color);
+    padding: 60px 10%;
+}
+
+#projects h2 {
+    font-size: 2.5rem;
+    color: yellowgreen;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 3px solid white;
+    display: inline-block;
+}
+
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.project-card {
+    background-color: #254f6c;
+    color: lightgray;
+    border-radius: 10px;
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.project-card h3 {
+    font-size: 1.8rem;
+    color: yellowgreen;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.project-card .btn {
+    background: yellowgreen;
+    color: #091b29;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    background-color: #2e6b8a;
+}
+
+.project-card .btn:hover {
+    background-color: white;
+    color: yellowgreen;
+}
+
+
+
+/* CV Section */
+#cv {
+    background-color: #091b29;
+    text-align: center;
+    padding: 40px 10%;
+}
+
+#cv h2 {
+    font-size: 2.5rem;
+    color: yellowgreen;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 3px solid white;
+    display: inline-block;
+}
+
+#cv .btn {
+    background: yellowgreen;
+    color: #091b29;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+#cv .btn:hover {
+    transform: scale(1.1);
+    background-color: white;
+    color: yellowgreen;
+}
+
+/* Contact Section */
+#contact {
+    background-color: #1b2b3d;
+    padding: 60px 10%;
+    color: var(--text-color);
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    color: yellowgreen;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 3px solid white;
+    display: inline-block;
+}
+
+#contact p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: lightgray;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+    color: yellowgreen;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2rem;
+    border: 1px solid var(--main-color);
+    border-radius: 5px;
+    background:
+}
+
+
