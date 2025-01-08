@@ -8,7 +8,7 @@
     border: none;
     outline: none;
     scroll-behavior: smooth;
-    font-family: 'poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 :root {
@@ -76,8 +76,6 @@ section {
     display: flex;
     align-items: center;
     padding: 0 9%;
-   
-
 }
 
 .home-content {
@@ -190,10 +188,10 @@ section {
     z-index: 1;
     overflow: hidden;
     transition: .5s;
-} 
+}
 
-.home-sci a:hover{
-    color:var(--bg-color)
+.home-sci a:hover {
+    color: var(--bg-color);
 }
 
 .home-sci a::before {
@@ -203,36 +201,13 @@ section {
     left: 0;
     width: 0;
     height: 100%;
-    background:var(--main-color);
+    background: var(--main-color);
     z-index: -1;
     transition: .5s;
 }
 
 .home-sci a:hover::before {
     width: 100%;
-}
-/* .home-imgHover{
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 45%;
-    height: 100%;
-    background: transparent;
-    
-    transition: 3s;
-
-}
-.home-imgHover:hover{
-    background: var(--bg-color);
-    opacity: .8s;
-} */
-
-
-.home-sci {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    gap: 20px;
 }
 
 .social-icon {
@@ -264,40 +239,29 @@ section {
     transform: rotate(360deg);
 }
 
-
-
 .photo-container {
-    position: absolute; 
-    top: 55%; 
-    right: 150px; 
-    transform: translateY(-50%); 
-    width: 30%; 
-    height: auto; 
+    position: absolute;
+    top: 55%;
+    right: 150px;
+    transform: translateY(-50%);
+    width: 30%;
+    height: auto;
 }
 
 .photo-container img {
-    width: 100%; 
-    height: auto; 
-    border-radius: 0px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    width: 100%;
+    height: auto;
+    border-radius: 0px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* General Section Styling */
-/* section {
-    padding: 60px 10%;
-    color: white;
-    text-align: center;
-    background-color: #091b29;
-} */
-
-/* About Section */
 #about {
-    background-color:var(--bg-color);
+    background-color: var(--bg-color);
 }
 
 #about h2 {
     font-size: 2.5rem;
-    color:var(--main-color);
+    color: var(--main-color);
     margin-bottom: 20px;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -312,45 +276,34 @@ section {
     color: yellowgreen;
 }
 
-/* Education Section */
 #education {
-    background-color: var(--bg-color); /* Background color */
+    background-color: var(--bg-color);
     padding: 20px;
     margin: 20px auto;
-    width: 80%; /* Makes it centered with some space on the sides */
-    max-width: 1200px; /* Maximum width for larger screens */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
-    border: 1px solid #ddd; /* Light border around the section */
+    width: 80%;
+    max-width: 1200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
 }
 
-/* Title of Education Section */
 #education h2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-size: 2.5rem;
     color: var(--main-color);
     margin-bottom: 20px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    border-bottom: 3px solid white; /* Bottom border for title */
-    padding-bottom: 5px; /* Small space below the title */
-    width: 100%; /* Ensure it spans the full width of the parent container */
+    border-bottom: 3px solid white;
+    padding-bottom: 5px;
+    width: 100%;
 }
 
-
-/* Paragraph Styling */
 #education p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-size: 1.2rem;
     margin: 10px 0;
     color: lightgray;
 }
 
-/* Strong Text (Degree Titles) */
 #education p strong {
     color: yellowgreen;
     font-size: 2.0rem;
@@ -358,31 +311,27 @@ section {
     margin-top: 5px;
 }
 
-/* Education Item Box */
 .education-item {
     background-color: #fff;
     padding: 15px;
     margin: 15px 0;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    border: 1px solid #ddd; /* Light border around each item */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
 }
 
-/* Alternate Background for Education Items */
 .education-item:nth-child(even) {
-    background-color: #f9f9f9; /* Slightly different background for even items */
+    background-color: #f9f9f9;
 }
 
-/* Styling the Year Text */
 .education-item p:last-of-type {
-    color: #888; /* Lighter color for the year */
+    color: #888;
     font-style: italic;
 }
 
-/* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
     #education {
-        width: 90%; /* Make it a bit wider on smaller screens */
+        width: 90%;
         padding: 15px;
     }
 
@@ -399,7 +348,6 @@ section {
     }
 }
 
-/* Skills Section */
 #skills {
     background-color: var(--bg-color);
 }
@@ -425,7 +373,7 @@ section {
 }
 
 #skills ul li {
-    background:black;
+    background: black;
     color: yellowgreen;
     padding: 10px 20px;
     border-radius: 25px;
@@ -440,7 +388,6 @@ section {
     color: var(--main-color);
 }
 
-/* Projects Section */
 #projects {
     background-color: var(--bg-color);
     padding: 60px 10%;
@@ -484,6 +431,8 @@ section {
     font-size: 1.2rem;
     margin-bottom: 15px;
 }
+
+
 
 .project-card .btn {
     background: yellowgreen;
